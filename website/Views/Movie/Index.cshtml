@@ -1,0 +1,44 @@
+﻿@model List<website.Models.MovieModel>;
+
+@{
+  ViewData["Title"] = "Movies";
+}
+
+<h1>@ViewBag.MainTitle</h1>
+
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Movie title</th>
+        <th>Genre</th>
+        <th>Release Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      @foreach (var item in Model)
+      {
+        <tr>
+          <td>@item.Name</td>
+          <td>@item.Genre</td>
+          <td>@item.ReleaseDate</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
+
+<div>
+  <style>
+    /* Add CSS styles for the button */
+    .custom-button {
+      background-color: #007bff; /* Change the background color to your preference */
+      color: #ffffff; /* Change the text color to your preference */
+      padding: 10px 20px; /* Adjust padding as needed */
+      border: none; /* Remove the button border */
+      border-radius: 5px; /* Add rounded corners if desired */
+      cursor: pointer; /* Change cursor on hover */
+    }
+  </style>
+  <button class="custom-button"> I am The Button</button>
+</div>

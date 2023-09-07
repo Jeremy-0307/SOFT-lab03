@@ -1,0 +1,71 @@
+﻿@model List<website.Models.SongModel>;
+
+@{
+  ViewData["Title"] = "Songs";
+}
+
+<h1>@ViewBag.MainTitle</h1>
+
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Genre</th>
+        <th>Author</th>
+        <th>Duration</th>
+        <th>Year</th>
+      </tr>
+    </thead>
+    <tbody>
+      @foreach (var item in Model)
+      {
+        <tr>
+          <td>@item.Name</td>
+          <td>@item.Genre</td>
+          <td>@item.Author</td>
+          <td>@item.Duration</td>
+          <td>@item.year</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>
+
+<div>
+  <style>
+    .custom-button {
+      background-color: #007bff;
+      color: #ffffff; 
+      padding: 10px 20px; 
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+  <button class="custom-button"><b>Comadreja Button</b></button>
+</div>
+<div>
+  <h2>Cual es tu cancion favorita?</h2>
+  <div>
+    <label for="textNombre">Nombre:   </label>
+    <input type="text" id="textNombre" name="textNombre">
+  </div>
+  <div>
+    <label for="textGenre">Genero:    </label>
+    <input type="text" id="textGenre" name="textGenre">
+  </div>
+  <div>
+    <label for="textAutor">Autor:   </label>
+    <input type="text" id="textAutor" name="textAutor">
+  </div>
+  <div>
+    <label for="textDuracion">Duracion:   </label>
+    <input type="text" id="textDuracion" name="textDuracion">
+  </div>
+  <div>
+    <label for="textAnho">Anho:   </label>
+    <input type="text" id="textAnho" name="textAnho">
+  </div>
+
+</div>
